@@ -46,6 +46,23 @@ app.post('/login', function (req, res) {
     }
 })
 
+app.get('/profile', function(req, res){
+    const mockProfile = [
+        {
+            name: 'Ahmad Dawud',
+            profession: 'Developer',
+            stack: 'Backend'
+        }
+    ]
+
+    res.json({
+        success: true,
+        message: 'My Profile: ',
+        profile: mockProfile
+    })
+
+})
+
 app.listen(8000,function(){
     console.log("server is running");
 })
